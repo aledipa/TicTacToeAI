@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the triggerAI method from the TrisHomeState class, for the Dart programming language.">
+  <title>triggerAI method - TrisHomeState class - main library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">flutter_tris</a></li>
+    <li><a href="../../main/main-library.html">main</a></li>
+    <li><a href="../../main/TrisHomeState-class.html">TrisHomeState</a></li>
+    <li class="self-crumb">triggerAI method</li>
+  </ol>
+  <div class="self-name">triggerAI</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">triggerAI</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">void</span>
+<span class="name ">triggerAI</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="triggerAI-param-aiPlayer"><span class="type-annotation"><a href="../../bots_player_ai/PlAIer-class.html">PlAIer</a></span> <span class="parameter-name">aiPlayer</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">void triggerAI(PlAIer aiPlayer) {
+  if(isChecked) {
+    var newValues = aiPlayer.move(values);
+    var newController = &quot;&quot;;
+    for (int i=0; i&lt;_gridController.text.length; i++) {
+      values[i] = newValues[i];
+      if (newValues[i].isNotEmpty) {
+        newController += newValues[i];
+      } else {
+        newController += &quot; &quot;;
+      }
+    }
+    if (isChecked &amp;&amp; (getCurrentPlayer() == &quot;O&quot;) &amp;&amp; isVictory()) {
+      moves++;
+    }
+    setState(() {
+      _gridController.text = newController;
+    });
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">flutter_tris</a></li>
+  <li><a href="../../main/main-library.html">main</a></li>
+  <li><a href="../../main/TrisHomeState-class.html">TrisHomeState</a></li>
+  <li class="self-crumb">triggerAI method</li>
+</ol>
+
+
+    <h5>TrisHomeState class</h5>
+    <ol>
+
+    <li class="section-title"><a href="../../main/TrisHomeState-class.html#constructors">Constructors</a></li>
+    <li><a href="../../main/TrisHomeState/TrisHomeState.html">TrisHomeState</a></li>
+
+
+    <li class="section-title">
+      <a href="../../main/TrisHomeState-class.html#instance-properties">Properties</a>
+    </li>
+    <li class="inherited"><a href="../../main/TrisHomeState/context.html">context</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.2/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../../main/TrisHomeState/isChecked.html">isChecked</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/mounted.html">mounted</a></li>
+    <li><a href="../../main/TrisHomeState/moves.html">moves</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.2/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li><a href="../../main/TrisHomeState/values.html">values</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/widget.html">widget</a></li>
+
+    <li class="section-title"><a href="../../main/TrisHomeState-class.html#instance-methods">Methods</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/activate.html">activate</a></li>
+    <li><a href="../../main/TrisHomeState/build.html">build</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/deactivate.html">deactivate</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/debugFillProperties.html">debugFillProperties</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/didChangeDependencies.html">didChangeDependencies</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/didUpdateWidget.html">didUpdateWidget</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/dispose.html">dispose</a></li>
+    <li><a href="../../main/TrisHomeState/getBorder.html">getBorder</a></li>
+    <li><a href="../../main/TrisHomeState/getColor.html">getColor</a></li>
+    <li><a href="../../main/TrisHomeState/getCurrentColor.html">getCurrentColor</a></li>
+    <li><a href="../../main/TrisHomeState/getCurrentPlayer.html">getCurrentPlayer</a></li>
+    <li><a href="../../main/TrisHomeState/getSwitchColor.html">getSwitchColor</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/initState.html">initState</a></li>
+    <li><a href="../../main/TrisHomeState/isFull.html">isFull</a></li>
+    <li><a href="../../main/TrisHomeState/isHorizontalCompleted.html">isHorizontalCompleted</a></li>
+    <li><a href="../../main/TrisHomeState/isObliqueCompleted.html">isObliqueCompleted</a></li>
+    <li><a href="../../main/TrisHomeState/isVerticalCompleted.html">isVerticalCompleted</a></li>
+    <li><a href="../../main/TrisHomeState/isVictory.html">isVictory</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.2/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/reassemble.html">reassemble</a></li>
+    <li><a href="../../main/TrisHomeState/restart.html">restart</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/setState.html">setState</a></li>
+    <li><a href="../../main/TrisHomeState/setWinnerCells.html">setWinnerCells</a></li>
+    <li><a href="../../main/TrisHomeState/showDrawMessage.html">showDrawMessage</a></li>
+    <li><a href="../../main/TrisHomeState/showTurnMessage.html">showTurnMessage</a></li>
+    <li><a href="../../main/TrisHomeState/showVictoryMessage.html">showVictoryMessage</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/toDiagnosticsNode.html">toDiagnosticsNode</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/toString.html">toString</a></li>
+    <li class="inherited"><a href="../../main/TrisHomeState/toStringShort.html">toStringShort</a></li>
+    <li><a href="../../main/TrisHomeState/triggerAI.html">triggerAI</a></li>
+
+    <li class="section-title inherited"><a href="../../main/TrisHomeState-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.14.2/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    flutter_tris
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
